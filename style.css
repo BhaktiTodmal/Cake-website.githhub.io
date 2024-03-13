@@ -483,7 +483,7 @@
 .footer-section {
   margin-top: 100px;
   /* background: #FEF2F2; */
-  background-image: linear-gradient(to right, #FFE4D3, #FEF2F2);
+  background-image: linear-gradient(to right, rgb(136, 245, 245), rgb(136, 245, 245));
   padding: 50px 100px;
 
   border-top-left-radius: 90px;
