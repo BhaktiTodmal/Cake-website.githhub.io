@@ -298,13 +298,13 @@
 .containerChef {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   flex-wrap: wrap;
 }
 
 .cardChef {
   margin: 12px;
-  padding: 18px;
+  padding: 5px;
   width: 500px;
   height: 400px;
   background-color: rgb(238, 235, 235);
@@ -314,12 +314,12 @@
 
 .cardChef img {
   display: block;
-  width: 50%;
-  height: 100%;
+  width: 60%;
+  height: 90%;
 }
 
 .card-info {
-  padding: 5px 0 7px;
+  padding: 10px 0 7px;
   text-align: center;
 }
 
