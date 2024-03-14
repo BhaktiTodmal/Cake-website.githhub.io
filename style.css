@@ -571,11 +571,12 @@
 
 .footer-box p {
   font-weight: 600;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .footer-box ul {
   min-width: 200px;
+  font-size: 20px;
 }
 
 .footer-section .reserved {
