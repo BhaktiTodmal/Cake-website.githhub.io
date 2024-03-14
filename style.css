@@ -300,11 +300,11 @@
   align-items: center;
   justify-content:left;
   flex-wrap: wrap;
-  margin-left: 10px;
+
 }
 
 .cardChef {
-  margin: 10px;
+  margin: 50px;
   padding: 1px;
   width: 500px;
   height: 400px;
