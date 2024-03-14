@@ -425,7 +425,12 @@
   width: 50%;
   height: 50%;
         }
-
+.about-image img {
+    width: 100%; /* Set the width to 100% of its container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 400px; /* Limit the maximum width of the image */
+    max-height: 400px; /* Limit the maximum height of the image */
+}
        
       
 
