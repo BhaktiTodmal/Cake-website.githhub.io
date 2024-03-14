@@ -357,8 +357,12 @@
 .about {
   font-size: 500px;
   font-family: "Great Vibes", cursive;
-  text-align: right;
   margin-top: 25vh;
+  /* Additional CSS to move the container to the right side */
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateY(50%);
 }
 
 
