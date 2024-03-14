@@ -552,7 +552,7 @@
 
 /* footer start */
 .footer-section {
-  margin-top: 100px;
+  margin-top: 10px;
   /* background: #FEF2F2; */
   background-image: linear-gradient(to right, #5de2dc, #5de2dc);
   padding: 50px 100px;
@@ -755,7 +755,7 @@ h2{
   }
 
   .bg-img {
-    height: 120vh;
+    height: 90vh;
   }
 
   .poster {
