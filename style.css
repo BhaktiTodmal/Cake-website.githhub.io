@@ -275,7 +275,92 @@
 }
 
 /* Menu section Ends  */
+/* about section starts */
+.chefStart {
+  margin-top: 5vh;
+}
 
+.chefStart h1 {
+  font-size: 66px;
+  font-family: "Great Vibes", cursive;
+  text-align: center;
+}
+
+
+.chefStart h2 {
+  font-size: 24px;
+  font-family: cursive;
+  text-align: center;
+  margin-bottom: 1vh;
+}
+
+.containerChef {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+.cardChef {
+  margin: 12px;
+  padding: 18px;
+  width: 500px;
+  height: 400px;
+  background-color: rgb(238, 235, 235);
+  border: 2px solid #c8a97e;
+  box-shadow: 0 5px 28px rgba(0, 0, 0, 0.05);
+}
+
+.cardChef img {
+  display: block;
+  width: 100%;
+  height: 90%;
+}
+
+.card-info {
+  padding: 10px 0 7px;
+  text-align: center;
+}
+
+.card-info h6 {
+  margin-bottom: 3px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  text-transform: capitalize;
+}
+
+.card-info span {
+  margin-bottom: 5px;
+  color: #c8a97e;
+  font-size: 13px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+
+.card-info a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 8px 2px 0;
+  color: #333333;
+  background-color: #f7f7f7f7;
+  border-radius: 50%;
+  font-size: 15px;
+  text-decoration: none;
+  line-height: 30px;
+  transition: all 0.5s;
+}
+
+.about {
+  font-size: 500px;
+  font-family: "Great Vibes", cursive;
+  text-align: right;
+  margin-top: 25vh;
+}
+
+
+/* chef section Ends */
 
 /* contact section starts */
 .heading {
