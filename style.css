@@ -73,6 +73,7 @@
   transition: all 0.3s ease;
   position: initial;
   background-color: rgb(136, 245, 245);
+
 }
 
 .heading {
@@ -102,7 +103,7 @@
 .navbar .menu-list {
   display: inline-flex;
   font-family: "Poppins", cursive;
-  background-image: url("./images/bg2.png");
+  
 
 }
 
