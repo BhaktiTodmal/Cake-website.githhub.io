@@ -102,6 +102,8 @@
 .navbar .menu-list {
   display: inline-flex;
   font-family: "Poppins", cursive;
+  background-image: url("./images/bg2.png");
+
 }
 
 .menu-list li {
