@@ -1,27 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- stylesheet -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
-        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
-        rel="stylesheet" />
-        <link rel="stylesheet" href="style.css">
-    <!-- fontawesome icon link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
-        integrity="sha512-rqQltXRuHxtPWhktpAZxLHUVJ3Eombn3hvk9PHjV/N5DMUYnzKPC1i3ub0mEXgFzsaZNeJcoE0YHq0j/GFsdGg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Bhakti's Cake</title>
- 
-</head>
-<style>
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+<!-- fontawesome icon link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    integrity="sha512-rqQltXRuHxtPWhktpAZxLHUVJ3Eombn3hvk9PHjV/N5DMUYnzKPC1i3ub0mEXgFzsaZNeJcoE0YHq0j/GFsdGg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        :root {
+            --white: #fff;
+            --black-2: #000;
+            --blue: #0000ff; /* Blue color variable */
+        }
+        .cursor {
+            position: fixed; 
+            left: 0;
+            pointer-events: none;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 23px;
+            color: var(--white);
+            background: var(--black-2);
+            text-transform: capitalize;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            transform: translate(-50%, -50%);
+            z-index: 999;
+            opacity: 0;
+            mix-blend-mode: hard-light;
+            transition: all .3s;
+        }
+        .cursor.large {
+            width: 180px;
+            height: 180px;
+            text-align: center;
+            font-size: 19px;
+            font-weight: 400;
+        }
+        .cursor1, .cursor2, .cursor-testi {
+            position: fixed;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 999;
+            mix-blend-mode: difference;
+        }
+        .cursor1 {
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--blue); /* Blue color */
+            border-radius: 50%;
+            transition: .15s;
+        }
+        @media (max-width: 1200px) {
+            .cursor1 {
+                display: none;
+            }
+        }
+        .cursor1.hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .cursor2 {
+            width: 8px;
+            height: 8px;
+            background-color: var(--blue); /* Blue color */
+            border-radius: 50%;
+            transition: .2s;
+        }
+        @media (max-width: 1200px) {
+            .cursor2 {
+                display: none;
+            }
+        }
+        .cursor2.hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .cursor2.circle {
+            width: 60px;
+            height: 60px;
+        }
+        .cursor-testi {
+            width: 80px;
+            height: 80px;
+            background-color: var(--black-2);
+            border-radius: 50%;
+            transition: .2s;
+        }
+        @media (max-width: 1200px) {
+            .cursor-testi {
+                display: none;
+            }
+        }
+        .cursor-testi.hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .cursor-testi.play {
+            width: 100px;
+            height: 100px;
+            mix-blend-mode: unset;
+            background-color: var(--black-2);
+        }
+        .cursor-testi.play:after {
+            position: absolute;
+            content: "Play";
+            color: var(--white);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #featured_cursor {
+            background: var(--white);
+            color: var(--black-2);
+        }
 
-
-/* Sticky navigation bar when scrolling */
-.navbar.sticky {
+        .navbar.sticky {
   position: fixed;
   top: 0;
   width: 100%;
@@ -37,12 +143,14 @@
 body.disabled {
   overflow: hidden;
 }
-</style>
+    </style>
+</head>
+<body>
+    <div class="cursor1"></div>
+    <div class="cursor2"></div>
+    <div id="preloader"></div>
+    
 
-<body style="background: rgb(243, 241, 243)"></body>
-
-  <!-- loading section -->
-  <div id="preloader"></div>
 
 
   <!-- navbar section -->
@@ -140,5 +248,24 @@ body.disabled {
   </script>
   <!-- hero section end -->
   <script src="./js/main.js"></script>
+
+    
+
+    <script>
+        // Select the custom cursor elements
+        const cursor1 = document.querySelector('.cursor1');
+        const cursor2 = document.querySelector('.cursor2');
+
+        // Function to move the cursors
+        function moveCursor(e) {
+            const x = e.clientX;
+            const y = e.clientY;
+            cursor1.style.transform = `translate(-50%, -50%) translate(${x}px, ${y}px)`;
+            cursor2.style.transform = `translate(-50%, -50%) translate(${x}px, ${y}px)`;
+        }
+
+        // Add event listener for mouse movement
+        document.addEventListener('mousemove', moveCursor);
+    </script>
 </body>
 </html>
